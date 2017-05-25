@@ -1,0 +1,44 @@
+html {
+  background: url(../images/background.jpg) black center right/cover fixed no-repeat;
+  color: white;
+}
+
+body {
+  margin: 0px;
+}
+
+header {
+  background-color: rgba(0,0,0,0.25);
+  height: 80px;
+  padding: 0 0 0 20;
+}
+
+header > h1 {
+  display: inline-block;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header > h5 {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 15px;
+}
+
+#nav {
+  background-color: rgba(0,0,0,0.25);
+  border-top: 1px orange solid;
+  border-bottom: 1px rgba(255,255,255,0.25) solid;
+  padding: 15px;  
+}
+
+#nav > a {
+  padding: 15px;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-color: rgba(0,0,0,0.25);
+}
+
+footer > p {
+  text-align: right;
+}
