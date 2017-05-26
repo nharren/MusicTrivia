@@ -41,7 +41,7 @@ function processResults() {
 function clearAnswerHighlights() {
   for (i = 0; i < 10; i++) {
     for (j = 1; j < 5; j++) {
-      document.getElementById(questionLetters[i] + j + "l").style.color = "white";
+      document.getElementById(questionLetters[i] + j + "l").style.color = null;
     }
   }
 }
