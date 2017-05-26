@@ -1,6 +1,7 @@
 html {
   background: url(../images/background.jpg) black center right/cover fixed no-repeat;
   color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 body {
@@ -15,7 +16,7 @@ header {
 
 header > h1 {
   display: inline-block;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Segoe UI Light', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   letter-spacing: 1px;
 }
 
@@ -35,11 +36,37 @@ header > h5 {
 #nav > a {
   padding: 15px;
   text-decoration: none;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
   background-color: rgba(0,0,0,0.25);
 }
 
+#main {
+  line-height: 25px;
+}
+
+#submit-button {
+  margin: 5px 0px 15px 20px;
+}
+
+#results {
+  margin: 20px;
+  font-size: 16pt;
+}
+
+footer {
+  background-color: rgba(0,0,0,0.25);
+  border-top: 1px rgba(255,255,255,0.25) solid;
+}
+
 footer > p {
   text-align: right;
+  margin-right: 15px;
+}
+
+#about {
+  margin: 30px;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.25);
+  border-radius: 15px;
 }
