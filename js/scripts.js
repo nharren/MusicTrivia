@@ -94,7 +94,7 @@ function highlightAnswers(answers) {
     if (answers[i] === correctAnswers[i]) {
       document.getElementById(questionLetters[i] + answers[i] + "l").style.color = "lime";
     }
-    else {
+    else if (answers[i] != 0) {
       document.getElementById(questionLetters[i] + answers[i] + "l").style.color = "red";
     }
   }
