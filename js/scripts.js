@@ -29,11 +29,21 @@ function setAnswer(questionLetter, answer) {
 }
 
 function processResults() {
+  clearAnswerHighlights();
   var answers = getAnswers();
   var score = calculateScore(answers);
+  highlightAnswers(answers);
   displayScore(score);
   saveAnswers(answers);
   return false;
+}
+
+function clearAnswerHighlights() {
+  for (i = 0; i < 10; i++) {
+    for (j = 1; j < 5; j++) {
+      document.getElementById(questionLetters[i] + j + "l").style.color = "white";
+    }
+  }
 }
 
 function getAnswer(questionLetter) {   
@@ -79,9 +89,20 @@ function calculateScore(answers) {
   return score;
 }
 
+function highlightAnswers(answers) {
+  for (i = 0; i < 10; i++) {
+    if (answers[i] === correctAnswers[i]) {
+      document.getElementById(questionLetters[i] + answers[i] + "l").style.color = "lime";
+    }
+    else {
+      document.getElementById(questionLetters[i] + answers[i] + "l").style.color = "red";
+    }
+  }
+}
+
 function displayScore(score) {
   var resultText = "You answered " + score + " / 10 questions correctly.";
-  document.getElementById("results").innerHTML += resultText;
+  document.getElementById("results").innerHTML = resultText;
 }
 
 function saveAnswers(answers) {
