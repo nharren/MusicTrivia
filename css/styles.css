@@ -49,6 +49,10 @@ header > h5 {
   margin: 5px 0px 15px 20px;
 }
 
+#reset-button {
+  margin: 0px 0px 15px 20px;
+}
+
 #results {
   margin: 20px;
   font-size: 16pt;

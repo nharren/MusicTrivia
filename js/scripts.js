@@ -108,3 +108,11 @@ function displayScore(score) {
 function saveAnswers(answers) {
   localStorage.setItem("musicTrivia.answers", JSON.stringify(answers));
 }
+
+function resetQuiz() {
+  document.getElementById("quiz").reset();
+  clearAnswerHighlights();
+  document.getElementById("results").innerHTML = null;  
+  localStorage.removeItem("musicTrivia.answers");
+  return false;
+}
