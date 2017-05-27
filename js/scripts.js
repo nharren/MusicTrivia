@@ -47,36 +47,17 @@ function clearAnswerHighlights() {
 }
 
 function getAnswer(questionLetter) {   
-   if (document.getElementById(questionLetter + "1").checked){
-     return 1;  
-   }
-   else if (document.getElementById(questionLetter + "2").checked){
-     return 2;
-   }
-   else if (document.getElementById(questionLetter + "3").checked){
-     return 3;
-   }
-   else if (document.getElementById(questionLetter + "4").checked){
-     return 4;
-   }
-   else { // Unanswered question.
-     return 0;
-   }
+  for (var i = 1; i < 5; i++) {
+    if (document.getElementById(questionLetter + i).checked) {
+      return i;
+    }
+  }
+
+  return 0; // Unanswered question.
 }
 
 function getAnswers() {
-  return [
-    getAnswer("a"),
-    getAnswer("b"),
-    getAnswer("c"),
-    getAnswer("d"),
-    getAnswer("e"),
-    getAnswer("f"),
-    getAnswer("g"),
-    getAnswer("h"),
-    getAnswer("i"),
-    getAnswer("j"),
-  ]
+  return questionLetters.map(getAnswer);
 }
 
 function calculateScore(answers) {
